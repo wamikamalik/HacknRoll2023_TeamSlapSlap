@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Slap Slap</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="/static/css/font-face.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="/static/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="/static/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/static/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/static/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block">
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="/static/images/icon/logo-white.png" alt="CoolAdmin" />
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li class="has-sub">
+                                <a href="#LiveData">
+                                    <i class="fas fa-tachometer-alt"></i>Live Data
+                                    <span class="bot-line"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#HourlyStats">
+                                    <i class="fas fa-bar-chart-o"></i>
+                                    <span class="bot-line"></span>Hourly Statistics</a>
+                            </li>
+                            <li>
+                                <a href="#QuickFacts">
+                                    <i class="fas fa-lightbulb-o"></i>
+                                    <span class="bot-line"></span>Quick Facts</a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#Recommendations">
+                                    <i class="fas fa-check"></i>
+                                    <span class="bot-line"></span>Recommendations</a>
+                            </li>
+                            <li class="has-sub">
+                                <a href="#Information">
+                                    <i class="fas fa-info"></i>
+                                    <span class="bot-line"></span>Information</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#LiveData">
+                                <i class="fas fa-tachometer-alt"></i>Live Data</a>
+                        </li>
+                        <li>
+                            <a href="#HourlyStats">
+                                <i class="fas fa-bar-chart-o"></i>Hourly Statistics</a>
+                        </li>
+                        <li>
+                            <a href="#QuickFacts">
+                                <i class="fas fa-lightbulb-o"></i>Quick Facts</a>
+                        </li>
+                        <li>
+                            <a href="#Recommendations">
+                                <i class="far fa-check"></i>Recommendations</a>
+                        </li>
+                        <li>
+                            <a href="#Information">
+                                <i class="fas fa-info"></i>Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7">
+
+            <!-- Live Data -->
+            <section class="statistic statistic2" id="LiveData">
+                <div class="container-fluid">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="card">
+									<div class="card-header">
+										<h4>Slouch Score</h4>
+									</div>
+									<div class="card-body">
+										<p class="muted">Your score will be updated here</p>
+                                        <img class="card-img-top" id="slouch-grade" src="/static/images/d-icon.png" alt="Card image cap">
+									</div>
+								</div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" id="slouch_val" src="/static/images/3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <div class="progress mb-2" id="bar-update">
+                                                <div id="progress-bar" class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" margin-top="20px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Live Data -->
+
+            <!-- Hourly Stats -->
+            <section class="statistic statistic2" id="HourlyStats">
+                <div class="container-fluid">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                        <h3 class="title-2 m-b-40">Hourly Statistics</h3>
+                                        <canvas id="sales-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Hourly Stats -->
+
+            <!-- STATISTIC-->
+            <section class="statistic statistic2" id="QuickFacts">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="chart-percent-2">
+                                <h3 class="title-3 m-b-30">Age</h3>
+                                <div class="chart-wrap">
+                                    <canvas id="percent-chart2"></canvas>
+                                    <div id="chartjs-tooltip">
+                                        <table></table>
+                                    </div>
+                                </div>
+                                <div class="chart-info">
+                                    <div class="chart-note">
+                                        <span class="dot dot--blue"></span>
+                                        <span>Good</span>
+                                    </div>
+                                    <div class="chart-note">
+                                        <span class="dot dot--red"></span>
+                                        <span>Bad</span>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="overview-item overview-item--c1">
+                                <div class="overview__inner">
+                                    <div class="overview-box clearfix">
+                                        <div class="text">
+                                            <h2>85%</h2>
+                                            <span>of your age group have better posture</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="chart-percent-2">
+                                <h3 class="title-3 m-b-30">Occupation</h3>
+                                <div class="chart-wrap">
+                                    <canvas id="percent-chart3"></canvas>
+                                    <div id="chartjs-tooltip">
+                                        <table></table>
+                                    </div>
+                                </div>
+                                <div class="chart-info">
+                                    <div class="chart-note">
+                                        <span class="dot dot--blue"></span>
+                                        <span>Good</span>
+                                    </div>
+                                    <div class="chart-note">
+                                        <span class="dot dot--red"></span>
+                                        <span>Bad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overview-item overview-item--c2">
+                                <div class="overview__inner">
+                                    <div class="overview-box clearfix">
+                                        <div class="text">
+                                            <h2>73%</h2>
+                                            <span>from your profession have better posture</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="chart-percent-2">
+                                <h3 class="title-3 m-b-30">Activity</h3>
+                                <div class="chart-wrap">
+                                    <canvas id="percent-chart4"></canvas>
+                                    <div id="chartjs-tooltip">
+                                        <table></table>
+                                    </div>
+                                </div>
+                                <div class="chart-info">
+                                    <div class="chart-note">
+                                        <span class="dot dot--blue"></span>
+                                        <span>Good</span>
+                                    </div>
+                                    <div class="chart-note">
+                                        <span class="dot dot--red"></span>
+                                        <span>Bad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overview-item overview-item--c3">
+                                <div class="overview__inner">
+                                    <div class="overview-box clearfix">
+                                        <div class="text">
+                                            <h2>13%</h2>
+                                            <span>with similar acitivity levels have better posture</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC-->
+
+            <!-- STATISTIC CHART-->
+            <section class="statistic-chart" id="Recommendations">
+                <div class="container-fluid">
+                    <div class="section__content section__content--p30">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Stand up straight and keep your shoulders back and down
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r2.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Keep your feet hip-width apart and distribute your weight evenly on both feet
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r4.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Keep your head aligned over your spine, and your ears above your shoulders
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Avoid standing or sitting in one position for too long
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r5.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Take frequent breaks to stretch and walk around
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="/static/images/r6.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <p class="card-text">Keep your core muscles engaged
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC CHART-->
+
+            <!-- DATA TABLE-->
+            <section class="p-t-20">
+                
+            </section>
+            <!-- END DATA TABLE-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/static/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="/static/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="/static/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="/static/vendor/slick/slick.min.js">
+    </script>
+    <script src="/static/vendor/wow/wow.min.js"></script>
+    <script src="/static/vendor/animsition/animsition.min.js"></script>
+    <script src="/static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="/static/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="/static/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="/static/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="/static/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/static/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="/static/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/thermo.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
