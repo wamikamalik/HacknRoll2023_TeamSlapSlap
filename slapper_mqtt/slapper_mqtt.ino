@@ -172,6 +172,7 @@ Servo myservo;  // create servo object to control a servo
 
 long int lastSlap = 0;
 int slapping = 0;
+int play = 0;
 
 EspMQTTClient client(
   "Wamika",
@@ -191,30 +192,44 @@ void setup() {
 //  myservo.write(0);
 }
 
-void play() {
-  for (int thisNote = 60; thisNote < 112; thisNote++) {
-    int noteDuration = 750 / noteDurations[thisNote];
-    tone(D5, melody[thisNote], noteDuration);
-    int pauseBetweenNotes = noteDuration * 1.30;
-    delay(pauseBetweenNotes);
-    
-    noTone(D5);
-  }
-}
+int thisNote = 60;
+
+//void play() {
+//  for (int thisNote = 60; thisNote < 112; thisNote++) {
+//    int noteDuration = 750 / noteDurations[thisNote];
+//    tone(D5, melody[thisNote], noteDuration);
+//    int pauseBetweenNotes = noteDuration * 1.30;
+//    delay(pauseBetweenNotes);
+//    
+//    noTone(D5);
+//  }
+//}
 void loop() {
   client.loop();
 
-  if(millis() - lastSlap > 3000 && slapping > 0) {
-    lastSlap = millis();
-    slapping = 0; 
-    myservo.detach();
-  }
-  else if (slapping > 0) {
+//  if(millis() - lastSlap > 3000 && slapping > 0) {
+//    lastSlap = millis();
+//    slapping = 0; 
+//    myservo.detach();
+//  }
+//  else if (slapping > 0) {
+  if (play == 1) {
+    int noteDuration = 750 / noteDurations[thisNote];
+    tone(D5, melody[thisNote], noteDuration);
     myservo.attach(servoPin);
     myservo.write(180);
-    delay(200);
+    delay(2*1.3);
     myservo.write(-90);
-    delay(200);
+    delay(2*1.3);
+    noTone(D5);
+  }
+
+  if (thisNote == 112 || play == 0) {
+    play = 0;
+    slapping = 0;
+    myservo.detach();
+  } else {
+    thisNote++;
   }
 //  int pos = ;
 //  for (pos = 90; pos >= 0; pos -= 1) // goes from 180 degrees to 0 degrees
@@ -240,17 +255,19 @@ void onConnectionEstablished()
     case 0:
       // no slouch
       slapping = 0;
+      play = 0;
       break;
     case 1:
     case 2:
     case 3:
       slapping = 1;
+      play = 1;
       lastSlap = millis();
-      play();
       break;
     default:
       // cat == 4, all other values
       slapping = 0;
+      play = 0;
       break;
     }
   });
