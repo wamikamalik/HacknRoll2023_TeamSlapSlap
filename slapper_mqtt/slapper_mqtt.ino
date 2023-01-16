@@ -262,6 +262,7 @@ void onConnectionEstablished()
     case 3:
       slapping = 1;
       play = 1;
+      thisNote = 60;
       lastSlap = millis();
       break;
     default:
